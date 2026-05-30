@@ -1,0 +1,167 @@
+.footer {
+  background-color: #2e2f42; /* фон футера */
+  color: #ffffff; /* базовий колір тексту */
+  padding: 100px 0; /* верхній і нижній відступ */
+}
+
+/* ===== FLEX КОНТЕЙНЕР ===== */
+.footer-container {
+  display: flex; /* розміщує 3 блоки в ряд */
+  align-items: flex-start; /* вирівнювання по верхньому краю */
+
+} 
+
+/* ===== ЛІВИЙ БЛОК ===== */
+.footer-left {
+  display: flex; /* включає flex для вертикального стеку */
+  flex-direction: column; /* елементи один під одним */
+  gap: 16px; /* відстань між логотипом і текстом */
+  align-items: flex-start; /* вирівнювання по лівому краю */
+  margin-right: 120px;
+}
+
+/* ===== ЛОГОТИП ===== */
+.footer-logo {
+  display: inline-block; /* дозволяє керувати розмірами */
+  font-family: "Raleway", sans-serif; /* шрифт логотипу */
+  font-weight: 700; /* жирний текст */
+  font-size: 18px; /* розмір шрифту */
+  line-height: 1.33; /* висота рядка */
+  letter-spacing: 0.03em; /* відступ між літерами */
+  text-transform: uppercase; /* великі літери */
+  color: #f4f4fd; /* світлий колір */
+  text-decoration: none; /* прибирає підкреслення */
+}
+
+.footer-logo .logo-accent {
+  color: #4d5ae5; /* акцентний колір частини логотипу */
+}
+
+/* ===== ТЕКСТ ПІД ЛОГОТИПОМ ===== */
+.footer-text {
+  max-width: 264px; /* обмеження ширини тексту */
+  font-size: 16px; /* розмір тексту */
+  line-height: 1.5; /* читабельність */
+  letter-spacing: 0.02em; /* трохи розряджений текст */
+  color: #f4f4fd; /* світлий текст */
+  margin: 0; /* прибирає стандартні відступи */
+}
+
+/* ===== СОЦІАЛЬНИЙ БЛОК ===== */
+.footer-social {
+  display: flex; /* вертикальна структура */
+  flex-direction: column; /* елементи в стовпчик */
+  gap: 16px; /* відступи між елементами */
+  align-items: flex-start; /* вирівнювання зліва */
+  margin-right: 83px;
+}
+
+/* заголовок соцмереж + заголовок subscribe */
+.footer-social-title,
+.subscribe-title {
+  font-weight: 500; /* середня жирність */
+  font-size: 16px; /* розмір тексту */
+  line-height: 1.5; /* висота рядка */
+  margin: 0 0 16px; /* відступ вниз */
+}
+
+/* список іконок */
+.footer-social-list {
+  display: flex; /* іконки в ряд */
+  gap: 16px; /* відстань між іконками */
+  list-style: none; /* прибирає маркери */
+  padding: 0; /* прибирає внутрішні відступи */
+  margin: 0; /* прибирає зовнішні відступи */
+}
+
+/* кнопка соцмереж */
+.footer-social-link {
+  width: 40px; /* ширина */
+  height: 40px; /* висота */
+  background-color: #4d5ae5; /* синій фон */
+  border-radius: 50%; /* кругла форма */
+  display: flex; /* для центрування іконки */
+  align-items: center; /* вертикальне центрування */
+  justify-content: center; /* горизонтальне центрування */
+  transition: background-color 250ms; /* плавний hover */
+}
+
+/* hover ефект */
+.footer-social-link:hover,
+.footer-social-link:focus {
+  background-color: #31d0aa; /* зелений при наведенні */
+}
+
+/* іконка */
+.footer-social-icon {
+  fill: #f4f4fd; /* білий колір іконки */
+}
+
+/* ===== ФОРМА ПІДПИСКИ ===== */
+.subscribe-form {
+  display: flex; /* input + кнопка в ряд */
+  gap: 24px; /* відстань між ними */
+}
+
+/* поле вводу email */
+.subscribe-input {
+  width: 264px; /* ширина поля */
+  height: 40px; /* висота */
+  padding-left: 16px; /* відступ тексту всередині */
+
+  background: transparent; /* прозорий фон */
+  border: 1px solid #ffffff; /* біла рамка */
+  border-radius: 4px; /* скруглення */
+
+  font-size: 12px; /* розмір тексту */
+  line-height: 2; /* висота рядка */
+  letter-spacing: 0.04em; /* розрядка */
+  color: #ffffff; /* білий текст */
+
+  outline: transparent; /* прибирає стандартний outline */
+  transition: border-color 250ms; /* плавний ефект */
+}
+
+/* фокус на input */
+.subscribe-input:focus {
+  border-color: #31d0aa; /* зелена рамка */
+}
+
+/* placeholder */
+.subscribe-input::placeholder {
+  color: #ffffff; /* білий placeholder */
+}
+
+/* кнопка */
+.subscribe-btn {
+  min-width: 165px; /* мінімальна ширина */
+  height: 40px; /* висота */
+
+  display: flex; /* центрування контенту */
+  align-items: center; /* вертикаль */
+  justify-content: center; /* горизонталь */
+
+  font-size: 16px; /* текст */
+  font-weight: 500; /* жирність */
+  letter-spacing: 0.04em; /* розрядка */
+  color: #ffffff; /* білий текст */
+
+  background-color: #4d5ae5; /* синій фон */
+  border: none; /* без рамки */
+  border-radius: 4px; /* скруглення */
+
+  cursor: pointer; /* курсор-рука */
+  transition: background-color 250ms; /* плавність */
+}
+
+/* hover кнопки */
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: #31d0aa; /* зелений */
+}
+
+/* іконка в кнопці */
+.subscribe-icon {
+  margin-left: 16px; /* відступ від тексту */
+  fill: #ffffff; /* білий колір */
+}

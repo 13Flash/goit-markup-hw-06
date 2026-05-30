@@ -1,0 +1,90 @@
+.team {
+  background-color: #f4f4fd; 
+  /* светло-серый фон секции */
+}
+
+/* список карточек */
+.team-list {
+  display: flex; /* карточки в ряд */
+  gap: 24px; /* расстояние между карточками */
+  justify-content: center; /* центрируем */
+  margin: 0; /* убираем margin */
+  padding: 0; /* убираем padding */
+  list-style: none; /* убираем точки */
+}
+
+/* карточка */
+.team-card {
+  background-color: #ffffff; /* белый фон */
+  width: calc((100% - 72px) / 4); /* 4 колонки */
+  border-radius: 0 0 4px 4px; /* скругление снизу */
+
+  box-shadow:
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
+}
+
+.team-card img {
+  display: block; /* убираем нижний зазор */
+}
+
+/* контент карточки */
+.team-card-content {
+  padding: 32px 16px; /* внутренние отступы */
+  text-align: center; /* текст по центру */
+}
+
+.block-title {
+  margin: 0 0 8px; /* отступ вниз 8px */
+  font-weight: 500; /* medium */
+  font-size: 20px; /* размер имени */
+  line-height: 1.2; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние букв */
+  color: #2e2f42; /* темный цвет */
+}
+
+.block-text {
+  margin: 0; /* убираем стандартный margin */
+  font-size: 16px; /* размер текста */
+  line-height: 1.5; /* читаемость */
+  letter-spacing: 0.02em; /* расстояние букв */
+  color: #434455; /* серый цвет */
+}
+
+/* соцсети */
+.team-social-list {
+  display: flex; /* иконки в ряд */
+  justify-content: center; /* центрируем */
+  gap: 24px; /* расстояние */
+  margin-top: 8px; /* отступ сверху */
+}
+
+/* элемент соцсетей */
+.team-social-item {
+  width: 40px; /* ширина */
+  height: 40px; /* высота */
+}
+
+/* ссылка соцсети */
+.team-social-link {
+  display: flex; /* flex для центрирования */
+  align-items: center; /* вертикаль */
+  justify-content: center; /* горизонталь */
+  width: 100%; /* вся ширина */
+  height: 100%; /* вся высота */
+  background-color: #4d5ae5; /* синий фон */
+  border-radius: 50%; /* круг */
+  transition: background-color 250ms; /* плавность */
+}
+
+/* hover/focus */
+.team-social-link:hover,
+.team-social-link:focus {
+  background-color: #404bbf; /* темнее */
+}
+
+/* svg */
+.team-social-icon {
+  fill: #f4f4fd; /* цвет иконки */
+}

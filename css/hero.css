@@ -1,0 +1,63 @@
+.hero-body {
+  background-color: #2e2f42; /* базовий темний фон */
+  background-image:
+    linear-gradient(
+      180deg,
+      rgba(46, 47, 66, 0.7) 0%, /* затемнення зверху */
+      rgba(46, 47, 66, 0.7) 100% /* затемнення знизу */
+    ),
+    url(../images/hero-bg.jpg); /* фонове зображення */
+
+  max-width: 1440px; /* максимальна ширина секції */
+  background-position: center; /* центрування картинки */
+  background-repeat: no-repeat; /* без повторення */
+  background-size: cover; /* повне заповнення блоку */
+
+  padding-top: 188px; /* відступ зверху */
+  padding-bottom: 188px; /* відступ знизу */
+
+  margin-left: auto; /* центрування блоку */
+  margin-right: auto; /* центрування блоку */
+}
+
+.hero-container {
+  display: flex; /* включає flex */
+  flex-direction: column; /* елементи вертикально */
+  align-items: center; /* центрування по горизонталі */
+  row-gap: 48px; /* відстань між заголовком і кнопкою */
+}
+
+.hero-title {
+  font-weight: 700; /* жирний текст */
+  font-size: 56px; /* великий заголовок */
+  max-width: 496px; /* обмеження ширини */
+  color: #ffffff; /* білий текст */
+  line-height: 1.07143; /* щільність рядків */
+  letter-spacing: 0.02em; /* легка розрядка */
+  text-align: center; /* центрування тексту */
+  margin: 0; /* прибирає відступи */
+}
+
+.hero-button {
+  padding: 16px 32px; /* внутрішні відступи */
+  border: none; /* без рамки */
+  border-radius: 4px; /* заокруглення */
+
+  font-weight: 500; /* середня жирність */
+  font-size: 16px; /* розмір тексту */
+  line-height: 1.5; /* висота рядка */
+  letter-spacing: 0.04em; /* розрядка */
+
+  color: #ffffff; /* білий текст */
+  background-color: #4d5ae5; /* синя кнопка */
+
+  cursor: pointer; /* курсор-рука */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); /* тінь кнопки */
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* плавність */
+}
+
+.hero-button:hover,
+.hero-button:focus {
+  background-color: #404bbf; /* темніший синій при hover */
+}

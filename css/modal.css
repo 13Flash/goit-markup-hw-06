@@ -1,0 +1,284 @@
+/* ===== BACKDROP ===== */
+.modal-overlay {
+  background-color: rgba(46, 47, 66, 0.4); /* затемнение фона */
+  position: fixed; /* фиксируем на весь экран */
+  top: 0; /* от верхнего края */
+  left: 0; /* от левого края */
+  width: 100%; /* вся ширина */
+  height: 100%; /* вся высота */
+  z-index: 999; /* поверх всего */
+
+  display: flex; /* центрируем модалку */
+  justify-content: center; /* по горизонтали */
+  align-items: center; /* по вертикали */
+
+  opacity: 0; /* скрыто */
+  pointer-events: none; /* нельзя кликнуть */
+  visibility: hidden; /* полностью скрыто */
+
+  transition: opacity 250ms ease, visibility 250ms ease; /* плавное появление */
+}
+
+.modal-overlay.is-open {
+  opacity: 1; /* показать */
+  pointer-events: auto; /* включить клики */
+  visibility: visible; /* сделать видимой */
+}
+
+/* ===== MODAL WINDOW ===== */
+.modal {
+  position: relative; /* для кнопки close */
+  width: 408px; /* фикс ширина */
+  min-height: 584px; /* минимальная высота */
+
+  background: #fcfcfc; /* белый фон */
+  border-radius: 4px; /* скругление */
+
+  padding: 72px 24px 24px; /* внутренние отступы */
+
+  box-shadow: 0 1px 1px rgba(0,0,0,0.14),
+              0 1px 3px rgba(0,0,0,0.12),
+              0 2px 1px rgba(0,0,0,0.2); /* тень */
+
+  overflow-y: auto; /* скрол если контент длинный */
+}
+
+/* ===== CLOSE BUTTON ===== */
+.modal-close-btn {
+  position: absolute; /* позиция внутри модалки */
+  top: 24px; /* сверху */
+  right: 24px; /* справа */
+
+  width: 24px; /* ширина */
+  height: 24px; /* высота */
+
+  display: flex; /* центрируем иконку */
+  justify-content: center; /* по горизонтали */
+  align-items: center; /* по вертикали */
+
+  border-radius: 50%; /* круг */
+  background-color: #e7e9fc; /* фон кнопки */
+  border: 1px solid rgba(46,47,66,0.4); /* рамка */
+
+  cursor: pointer; /* рука */
+  padding: 0; /* убираем лишнее */
+
+  transition: background-color 250ms ease, border-color 250ms ease; /* hover эффект */
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+  background-color: #404bbf; /* синий фон */
+  border-color: transparent; /* убираем рамку */
+}
+
+/* иконка крестика */
+.modal-close-icon {
+  fill: #2e2f42; /* цвет иконки */
+  transition: fill 250ms ease; /* плавность */
+}
+
+.modal-close-btn:hover .modal-close-icon,
+.modal-close-btn:focus .modal-close-icon {
+  fill: #ffffff; /* белый при hover */
+}
+
+/* ===== TITLE ===== */
+.modal-title {
+  font-weight: 500; /* средняя жирность */
+  font-size: 16px; /* размер текста */
+  line-height: 1.5; /* высота строки */
+  text-align: center; /* по центру */
+  letter-spacing: 0.02em; /* расстояние между буквами */
+
+  color: #2e2f42; /* цвет текста */
+
+  margin-bottom: 16px; /* отступ вниз */
+}
+
+/* ===== INPUT BLOCK ===== */
+.modal-field-wrapper {
+  margin-bottom: 8px; /* расстояние между полями */
+}
+
+.comment-field-margin {
+  margin-bottom: 16px; /* больше отступ для textarea */
+}
+
+.modal-label {
+  display: block; /* label на всю строку */
+
+  font-size: 12px; /* маленький текст */
+  line-height: 1.17; /* компактно */
+  letter-spacing: 0.04em; /* стиль GoIT */
+
+  color: #8e8f99; /* серый текст */
+
+  margin-bottom: 4px; /* отступ до input */
+}
+
+/* ===== INPUT ===== */
+.modal-input-wrapper {
+  position: relative; /* для иконки */
+}
+
+.modal-input {
+  width: 100%; /* растягиваем */
+  height: 40px; /* высота */
+
+  padding-left: 38px; /* место под иконку */
+
+  border: 1px solid rgba(46,47,66,0.4); /* рамка */
+  border-radius: 4px; /* скругление */
+
+  background: transparent; /* прозрачный фон */
+  outline: transparent; /* убираем outline */
+
+  transition: border-color 250ms ease; /* плавная рамка */
+}
+
+.modal-input:focus {
+  border-color: #4d5ae5; /* синий при фокусе */
+}
+
+/* иконка input */
+.modal-input-icon {
+  position: absolute; /* внутри input */
+  left: 16px; /* слева */
+  top: 50%; /* центр по вертикали */
+  transform: translateY(-50%); /* точное центрирование */
+
+  fill: #2e2f42; /* базовый цвет */
+
+  transition: fill 250ms ease; /* плавность */
+}
+
+/* важно: фокус внутри wrapper */
+.modal-input-wrapper:focus-within .modal-input-icon {
+  fill: #4d5ae5; /* синий при фокусе */
+}
+
+/* ===== TEXTAREA ===== */
+.modal-textarea {
+  width: 100%; /* ширина */
+  height: 120px; /* высота */
+
+  padding: 8px 16px; /* внутренние отступы */
+
+  font-size: 12px; /* текст */
+  line-height: 1.17; /* высота строки */
+  letter-spacing: 0.04em; /* стиль */
+
+  color: #2e2f42; /* цвет текста */
+
+  border: 1px solid rgba(46,47,66,0.4); /* рамка */
+  border-radius: 4px; /* скругление */
+
+  resize: none; /* нельзя тянуть */
+  outline: none; /* убираем outline */
+
+  transition: border-color 250ms ease; /* плавность */
+}
+
+.modal-textarea:focus {
+  border-color: #4d5ae5; /* синий */
+}
+
+.modal-textarea::placeholder {
+  color: rgba(46,47,66,0.4); /* серый плейсхолдер */
+}
+
+/* ===== CHECKBOX ===== */
+.visually-hidden {
+  position: absolute; /* скрываем */
+  width: 1px; /* почти невидимый */
+  height: 1px;
+  overflow: hidden;
+}
+
+.modal-checkbox-wrapper {
+  margin-bottom: 24px; /* отступ вниз */
+}
+
+.modal-checkbox-label {
+  display: flex; /* в линию */
+  align-items: center; /* центр по вертикали */
+
+  font-size: 12px; /* маленький текст */
+  line-height: 1.17; /* компактно */
+  letter-spacing: 0.04em; /* стиль */
+
+  color: #8e8f99; /* серый */
+}
+
+/* кастом чекбокс */
+.modal-custom-checkbox {
+  width: 16px; /* размер */
+  height: 16px;
+
+  margin-right: 8px; /* отступ */
+
+  display: flex; /* центрируем галочку */
+  justify-content: center;
+  align-items: center;
+
+  border: 1px solid rgba(46,47,66,0.4); /* рамка */
+  border-radius: 2px; /* чуть скруглено */
+
+  background-color: transparent; /* пустой */
+
+  transition: background-color 250ms ease, border-color 250ms ease; /* плавность */
+}
+
+/* галочка */
+.modal-checkmark-icon {
+  opacity: 0; /* скрыта */
+  fill: #f4f4fd; /* цвет */
+
+  transition: opacity 250ms ease; /* плавность */
+}
+
+/* checked состояние */
+.modal-checkbox:checked + .modal-checkbox-label .modal-custom-checkbox {
+  background-color: #404bbf; /* синий фон */
+  border-color: #404bbf; /* синяя рамка */
+}
+
+.modal-checkbox:checked + .modal-checkbox-label .modal-checkmark-icon {
+  opacity: 1; /* показать галочку */
+}
+
+/* ===== LINK ===== */
+.modal-privacy-link {
+  color: #4d5ae5; /* синий */
+  text-decoration: underline; /* подчёркивание */
+}
+
+/* ===== BUTTON ===== */
+.modal-submit-btn {
+  display: block; /* центр через margin */
+  margin: 0 auto; /* центр */
+
+  min-width: 169px; /* минимальная ширина */
+  height: 56px; /* высота */
+
+  font-weight: 500; /* жирность */
+  letter-spacing: 0.04em; /* стиль */
+
+  color: #ffffff; /* белый текст */
+  background: #4d5ae5; /* синий фон */
+
+  border: none; /* без рамки */
+  border-radius: 4px; /* скругление */
+
+  cursor: pointer; /* рука */
+
+  box-shadow: 0 4px 4px rgba(0,0,0,0.15); /* тень */
+
+  transition: background-color 250ms ease; /* плавность */
+}
+
+.modal-submit-btn:hover,
+.modal-submit-btn:focus {
+  background: #404bbf; /* темнее при hover */
+}

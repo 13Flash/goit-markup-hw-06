@@ -1,0 +1,47 @@
+.header {
+  border-bottom: 1px solid #e7e9fc; /* 🔹 нижняя линия у хедера */
+  padding-top: 24px; /* 🔹 верхний отступ */
+  padding-bottom: 24px; /*🔹 нижний отступ */
+}
+
+
+.header-container {
+  display: flex; /* 🔹 включает flex-раскладку */
+  align-items: center; /* 🔹 выравнивает элементы по вертикали */
+}
+
+
+.navigation {
+  flex-grow: 1; /* 🔹 навигация занимает всё свободное пространство */
+  font-weight: 500; /* 🔹 средняя жирность текста */
+  font-size: 16px; /* 🔹 размер шрифта */
+  line-height: 1.5; /* 🔹 высота строки */
+  padding-left: 76px; /* 🔹 отступ слева от логотипа */
+}
+
+.navigation-list {
+  display: flex; /* 🔹 размещает пункты в ряд */
+  gap: 40px; /* 🔹 расстояние между пунктами меню */
+ 
+}
+
+.address-list {
+  display: flex; /* 🔹 размещает контакты в ряд */
+  gap: 40px; /* 🔹 расстояние между контактами */
+}
+
+.nav-Features {
+  position: relative; /* 🔹 база для underline */
+  display: inline-block; /* 🔹 ширина по тексту */
+}
+
+.nav-Features::after {
+  content: ""; /* 🔹 линия под ссылкой */
+  position: absolute; /* 🔹 позиция относительно текста */
+  left: 0; /* 🔹 слева */
+  bottom: -29px; /* 🔹 ниже текста */
+  width: 100%; /* 🔹 на всю ширину */
+  height: 4px; /* 🔹 толщина */
+  background-color: #404bbf; /* 🔹 цвет */
+  border-radius: 4px; /* 🔹 скругление */
+}

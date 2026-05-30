@@ -1,0 +1,41 @@
+.features-section {
+  background-color: #ffffff; /* фон секції */
+  padding: 120px 0; /* відступ зверху і знизу */
+}
+
+.features-list {
+  display: flex; /* ставить елементи в ряд */
+  gap: 24px; /* відстань між картками */
+}
+
+.features-item {
+  width: calc((100% - 72px) / 4); /* 4 рівні колонки */
+}
+
+.features-icon-container {
+  display: flex; /* включає flex для центрування */
+  align-items: center; /* вертикальне центрування */
+  justify-content: center; /* горизонтальне центрування */
+
+  height: 112px; /* висота блоку іконки */
+  background-color: #f4f4fd; /* світлий фон */
+  border: 1px solid #8e8f99; /* рамка */
+  border-radius: 4px; /* скруглення */
+
+  margin-bottom: 8px; /* відступ до тексту */
+}
+
+.features-subtitle {
+  font-weight: 500; /* середня жирність */
+  font-size: 20px; /* розмір заголовка */
+  line-height: 1.2; /* висота рядка */
+  color: #2e2f42; /* темний текст */
+
+  margin-bottom: 8px; /* відступ до опису */
+}
+
+.features-desc {
+  font-size: 16px; /* розмір тексту */
+  line-height: 1.5; /* читабельна висота рядка */
+  color: #434455; /* сірий текст */
+}
