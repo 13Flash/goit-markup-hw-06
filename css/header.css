@@ -1,7 +1,7 @@
 .header {
   border-bottom: 1px solid #e7e9fc; /* 🔹 нижняя линия у хедера */
-  padding-top: 24px; /* 🔹 верхний отступ */
-  padding-bottom: 24px; /*🔹 нижний отступ */
+  padding-top: 16px; /* 🔹 верхний отступ */
+  padding-bottom: 16px; /*🔹 нижний отступ */
 }
 
 
@@ -20,14 +20,12 @@
 }
 
 .navigation-list {
-  display: flex; /* 🔹 размещает пункты в ряд */
-  gap: 40px; /* 🔹 расстояние между пунктами меню */
- 
+  display: none; /* 🔹 размещает пункты в ряд */
+
 }
 
 .address-list {
-  display: flex; /* 🔹 размещает контакты в ряд */
-  gap: 40px; /* 🔹 расстояние между контактами */
+  display: none; /* 🔹 размещает контакты в ряд */
 }
 
 .nav-Features {
@@ -44,4 +42,37 @@
   height: 4px; /* 🔹 толщина */
   background-color: #404bbf; /* 🔹 цвет */
   border-radius: 4px; /* 🔹 скругление */
+}
+@media screen and (min-width: 768px) {
+  .navigation-list {
+    display: flex; /* 🔹 размещает пункты в ряд */
+    gap: 40px; /* 🔹 расстояние между пунктами меню */
+  }
+
+  .address-list {
+    display: flex; /* 🔹 размещает контакты в ряд */
+    flex-direction: column; /* 🔹 размещает контакты в колонку */
+    gap: 12px; /* 🔹 расстояние между контактами */
+  }
+  
+  .header-button {
+    display: none; /* 🔹 скрывает кнопку меню на больших экранах */
+  } 
+}
+@media screen and (min-width: 1158px) {
+  .navigation-list {
+    display: flex; /* 🔹 размещает пункты в ряд */
+    gap: 40px; /* 🔹 расстояние между пунктами меню */
+  }
+
+  .address-list {
+    display: flex; /* 🔹 размещает контакты в ряд */
+    flex-direction: row; /* 🔹 размещает контакты в строку */
+    gap: 40px; /* 🔹 расстояние между контактами */
+  }
+  
+  .header-button {
+    display: none; /* 🔹 скрывает кнопку меню на больших экранах */
+  } 
+
 }

@@ -44,8 +44,9 @@ address {
   font-family: 'Raleway', sans-serif; /* 🔹 шрифт логотипа */
   font-weight: 700; /* 🔹 жирный текст */
   font-size: 24px; /* 🔹 размер текста логотипа */
-  line-height: 1.33333; /* 🔹 высота строки */
+  line-height: 1.33; /* 🔹 высота строки */
   letter-spacing: 0.03em; /* 🔹 расстояние между буквами */
+ 
 }
 
 .section-title {
