@@ -1,78 +1,103 @@
 .header {
-  border-bottom: 1px solid #e7e9fc; /* 🔹 нижняя линия у хедера */
-  padding-top: 16px; /* 🔹 верхний отступ */
-  padding-bottom: 16px; /*🔹 нижний отступ */
+  border-bottom: 1px solid #e7e9fc; /* линия снизу */
+  box-shadow: 0 1px 6px rgba(46,47,66,0.08),
+              0 1px 1px rgba(46,47,66,0.16),
+              0 2px 1px rgba(46,47,66,0.08); /* тень */
 }
 
-
-.header-container {
-  display: flex; /* 🔹 включает flex-раскладку */
-  align-items: center; /* 🔹 выравнивает элементы по вертикали */
+.header .container {
+  display: flex; /* включаем flex */
+  align-items: center; /* выравнивание по центру вертикально */
+  justify-content: space-between; /* распределение по краям */
+  padding: 16px 16px; /* внутренние отступы */
 }
 
-
+/* NAV */
 .navigation {
-  flex-grow: 1; /* 🔹 навигация занимает всё свободное пространство */
-  font-weight: 500; /* 🔹 средняя жирность текста */
-  font-size: 16px; /* 🔹 размер шрифта */
-  line-height: 1.5; /* 🔹 высота строки */
-  padding-left: 76px; /* 🔹 отступ слева от логотипа */
+  display: flex; /* горизонтальная структура */
+  flex-grow: 1; /* занимает всё свободное место */
+  font-weight: 500; /* средняя жирность */
+  font-size: 16px; /* размер текста */
 }
 
-.navigation-list {
-  display: none; /* 🔹 размещает пункты в ряд */
-
+/* списки скрыты на мобиле */
+.navigation-list,
+.contact-list {
+  display: none; /* скрыто до 768px */
 }
 
-.address-list {
-  display: none; /* 🔹 размещает контакты в ряд */
+/* ссылки */
+.nav-link,
+.link {
+  display: inline-block; /* чтобы работали паддинги */
+  padding: 24px 0; /* вертикальный кликабельный блок */
+  transition: color 250ms cubic-bezier(0.4,0,0.2,1); /* плавный hover */
 }
 
-.nav-Features {
-  position: relative; /* 🔹 база для underline */
-  display: inline-block; /* 🔹 ширина по тексту */
+/* активная ссылка */
+.nav-active-link {
+  color: #404bbf; /* синий актив */
+  position: relative; /* для underline */
 }
 
-.nav-Features::after {
-  content: ""; /* 🔹 линия под ссылкой */
-  position: absolute; /* 🔹 позиция относительно текста */
-  left: 0; /* 🔹 слева */
-  bottom: -29px; /* 🔹 ниже текста */
-  width: 100%; /* 🔹 на всю ширину */
-  height: 4px; /* 🔹 толщина */
-  background-color: #404bbf; /* 🔹 цвет */
-  border-radius: 4px; /* 🔹 скругление */
+/* линия под активной ссылкой */
+.nav-active-link::after {
+  content: ""; /* псевдоэлемент */
+  position: absolute; /* позиционирование */
+  bottom: 0; /* снизу */
+  left: 0; /* слева */
+  width: 100%; /* на всю ширину */
+  height: 4px; /* толщина линии */
+  border-radius: 4px; /* скругление */
+  background-color: #404bbf; /* синий */
 }
+
+/* hover эффект */
+.nav-link:hover,
+.nav-link:focus,
+.link:hover,
+.link:focus {
+  color: #404bbf; /* подсветка */
+}
+
+/* КНОПКА ВПРАВО */
+.header-button {
+  margin-left: 16px;
+}
+
+/* ===== TABLET ===== */
 @media screen and (min-width: 768px) {
-  .navigation-list {
-    display: flex; /* 🔹 размещает пункты в ряд */
-    gap: 40px; /* 🔹 расстояние между пунктами меню */
+
+  .navigation-list,
+  .contact-list {
+    display: flex; /* показываем меню */
+    column-gap: 40px; /* расстояние между пунктами */
   }
 
-  .address-list {
-    display: flex; /* 🔹 размещает контакты в ряд */
-    flex-direction: column; /* 🔹 размещает контакты в колонку */
-    gap: 12px; /* 🔹 расстояние между контактами */
+  .contact-list {
+    flex-direction: column; /* контакты в колонку */
   }
-  
+
   .header-button {
-    display: none; /* 🔹 скрывает кнопку меню на больших экранах */
-  } 
+    display: none; /* скрываем кнопку на планшете и выше */
 }
+ .navigation {
+    margin-left: 76px;
+  }
+}
+
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 1158px) {
-  .navigation-list {
-    display: flex; /* 🔹 размещает пункты в ряд */
-    gap: 40px; /* 🔹 расстояние между пунктами меню */
-  }
 
-  .address-list {
-    display: flex; /* 🔹 размещает контакты в ряд */
-    flex-direction: row; /* 🔹 размещает контакты в строку */
-    gap: 40px; /* 🔹 расстояние между контактами */
+  .navigation-list,
+  .contact-list {
+    flex-direction: row; /* снова в ряд */
+    column-gap: 40px; /* расстояние */
   }
-  
   .header-button {
-    display: none; /* 🔹 скрывает кнопку меню на больших экранах */
-  } 
-
+    display: none; /* скрываем кнопку на планшете и выше */
+}
+ .navigation {
+    margin-left: 120px;
+  }
 }

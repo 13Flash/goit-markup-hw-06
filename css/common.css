@@ -1,99 +1,165 @@
 body {
-  font-family: 'Roboto', sans-serif; /* 🔹 задаёт основной шрифт сайта */
-  color: #2e2f42; /* 🔹 цвет всего текста на странице */
-  line-height: 1.5; /* 🔹 расстояние между строками текста */
-  letter-spacing: 0.02em; /* 🔹 расстояние между буквами */
-  background-color: #fff; /* 🔹 цвет фона страницы (белый) */
+  font-family: 'Roboto', sans-serif;
+  color: #2e2f42;
+  background-color: #ffffff;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1158px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 ul,
 ol {
-  list-style: none; /* 🔹 убирает маркеры у списков */
-  margin: 0; /* 🔹 убирает внешние отступы */
-  padding: 0; /* 🔹 убирает внутренние отступы */
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  text-decoration: none; /* 🔹 убирает подчёркивание ссылок */
-  color: inherit; /* 🔹 ссылка наследует цвет текста */
+  text-decoration: none;
+  color: inherit;
 }
 
 h1,
 h2,
 h3,
 p {
-  margin: 0; /* 🔹 убирает стандартные отступы сверху/снизу */
-  padding: 0; /* 🔹 убирает внутренние отступы */
+  margin: 0;
+  padding: 0;
+}
+
+.svg-def {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.default-palette,
+.palette0 {
+  color: currentColor;
+  --color0: #f4f4fd;
+  --color1: #4d5ae5;
+  --color2: #2e2f42;
 }
 
 address {
-  font-style: normal; /* 🔹 убирает курсив у адреса */
-  color: #434455; /* 🔹 задаёт серый цвет текста */
+  font-style: normal;
+  color: #434455;
 }
 
 .link:hover,
 .link:focus {
-  color: #4d5ae5; /* 🔹 меняет цвет ссылки при наведении/фокусе */
+  color: #404bbf;
 }
 
 .color-accent {
-  color: #4d5ae5; /* 🔹 акцентный синий цвет */
+  color: #4d5ae5;
 }
 
 .logo {
-  font-family: 'Raleway', sans-serif; /* 🔹 шрифт логотипа */
-  font-weight: 700; /* 🔹 жирный текст */
-  font-size: 24px; /* 🔹 размер текста логотипа */
-  line-height: 1.33; /* 🔹 высота строки */
-  letter-spacing: 0.03em; /* 🔹 расстояние между буквами */
- 
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.33333;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .section-title {
-  font-weight: 700; /* 🔹 жирный заголовок */
-  font-size: 36px; /* 🔹 размер заголовка */
-  line-height: 1.11; /* 🔹 высота строки заголовка */
-  letter-spacing: 0.02em; /* 🔹 расстояние между буквами */
-  text-align: center; /* 🔹 центрирует текст */
-  margin-bottom: 75px; /* 🔹 отступ снизу */
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .block-title {
-  font-weight: 500; /* 🔹 средняя жирность */
-  font-size: 20px; /* 🔹 размер текста */
-  line-height: 1.2; /* 🔹 высота строки */
-  letter-spacing: 0.02em; /* 🔹 расстояние между буквами */
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  letter-spacing: 0.02em;
+  text-align: center;
 }
 
 .block-text {
-  font-weight: 400; /* 🔹 обычная толщина текста */
-  font-size: 16px; /* 🔹 размер текста */
-  line-height: 1.5; /* 🔹 высота строки */
-  letter-spacing: 0.02em; /* 🔹 расстояние между буквами */
+  padding: 0;
+  margin: 0;
+  max-width: 264px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
 }
 
-.container {
-  max-width: 1158px; /* 🔹 максимальная ширина контента */
-  padding-left: 15px; /* 🔹 внутренний отступ слева */
-  padding-right: 15px; /* 🔹 внутренний отступ справа */
-  margin-left: auto; /* 🔹 центрирование контейнера */
-  margin-right: auto; /* 🔹 центрирование контейнера */
-}
-
-.section {
-  padding-top: 120px; /* 🔹 отступ сверху секции */
-  padding-bottom: 120px; /* 🔹 отступ снизу секции */
+.socials {
+  display: flex;
+  flex-direction: row;
+  column-gap: 24px;
 }
 
 .sr-only {
-  position: absolute; /* 🔹 убирает элемент из потока */
-  white-space: nowrap; /* 🔹 запрещает перенос строк */
-  width: 1px; /* 🔹 минимальная ширина */
-  height: 1px; /* 🔹 минимальная высота */
-  overflow: hidden; /* 🔹 скрывает лишнее */
-  border: 0; /* 🔹 убирает рамку */
-  padding: 0; /* 🔹 убирает отступы */
-  clip: rect(0 0 0 0); /* 🔹 полностью скрывает элемент */
-  clip-path: inset(100%); /* 🔹 дополнительное скрытие */
-  margin: -1px; /* 🔹 убирает влияние на layout */
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(100%);
+  margin: -1px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+.main-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px 32px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: #404bbf;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 120px 15px;
+  }
 }

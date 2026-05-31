@@ -1,167 +1,185 @@
 .footer {
-  background-color: #2e2f42; /* фон футера */
-  color: #ffffff; /* базовий колір тексту */
-  padding: 100px 0; /* верхній і нижній відступ */
+  padding-top: 96px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* ===== FLEX КОНТЕЙНЕР ===== */
 .footer-container {
-  display: flex; /* розміщує 3 блоки в ряд */
-  align-items: flex-start; /* вирівнювання по верхньому краю */
-
-} 
-
-/* ===== ЛІВИЙ БЛОК ===== */
-.footer-left {
-  display: flex; /* включає flex для вертикального стеку */
-  flex-direction: column; /* елементи один під одним */
-  gap: 16px; /* відстань між логотипом і текстом */
-  align-items: flex-start; /* вирівнювання по лівому краю */
-  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 72px;
 }
 
-/* ===== ЛОГОТИП ===== */
-.footer-logo {
-  display: inline-block; /* дозволяє керувати розмірами */
-  font-family: "Raleway", sans-serif; /* шрифт логотипу */
-  font-weight: 700; /* жирний текст */
-  font-size: 18px; /* розмір шрифту */
-  line-height: 1.33; /* висота рядка */
-  letter-spacing: 0.03em; /* відступ між літерами */
-  text-transform: uppercase; /* великі літери */
-  color: #f4f4fd; /* світлий колір */
-  text-decoration: none; /* прибирає підкреслення */
-}
-
-.footer-logo .logo-accent {
-  color: #4d5ae5; /* акцентний колір частини логотипу */
-}
-
-/* ===== ТЕКСТ ПІД ЛОГОТИПОМ ===== */
 .footer-text {
-  max-width: 264px; /* обмеження ширини тексту */
-  font-size: 16px; /* розмір тексту */
-  line-height: 1.5; /* читабельність */
-  letter-spacing: 0.02em; /* трохи розряджений текст */
-  color: #f4f4fd; /* світлий текст */
-  margin: 0; /* прибирає стандартні відступи */
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 288px;
 }
 
-/* ===== СОЦІАЛЬНИЙ БЛОК ===== */
-.footer-social {
-  display: flex; /* вертикальна структура */
-  flex-direction: column; /* елементи в стовпчик */
-  gap: 16px; /* відступи між елементами */
-  align-items: flex-start; /* вирівнювання зліва */
-  margin-right: 83px;
+.footer {
+  background-color: #2e2f42;
+  color: #ffffff;
 }
 
-/* заголовок соцмереж + заголовок subscribe */
-.footer-social-title,
-.subscribe-title {
-  font-weight: 500; /* середня жирність */
-  font-size: 16px; /* розмір тексту */
-  line-height: 1.5; /* висота рядка */
-  margin: 0 0 16px; /* відступ вниз */
+.footer .block-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
 }
 
-/* список іконок */
-.footer-social-list {
-  display: flex; /* іконки в ряд */
-  gap: 16px; /* відстань між іконками */
-  list-style: none; /* прибирає маркери */
-  padding: 0; /* прибирає внутрішні відступи */
-  margin: 0; /* прибирає зовнішні відступи */
+.footer .logo {
+  color: #f4f4fd;
 }
 
-/* кнопка соцмереж */
-.footer-social-link {
-  width: 40px; /* ширина */
-  height: 40px; /* висота */
-  background-color: #4d5ae5; /* синій фон */
-  border-radius: 50%; /* кругла форма */
-  display: flex; /* для центрування іконки */
-  align-items: center; /* вертикальне центрування */
-  justify-content: center; /* горизонтальне центрування */
-  transition: background-color 250ms; /* плавний hover */
+.footer .color-accent {
+  color: #4d5ae5;
 }
 
-/* hover ефект */
-.footer-social-link:hover,
-.footer-social-link:focus {
-  background-color: #31d0aa; /* зелений при наведенні */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
 }
 
-/* іконка */
-.footer-social-icon {
-  fill: #f4f4fd; /* білий колір іконки */
+.footer-socials .block-text {
+  font-weight: 500;
 }
 
-/* ===== ФОРМА ПІДПИСКИ ===== */
-.subscribe-form {
-  display: flex; /* input + кнопка в ряд */
-  gap: 24px; /* відстань між ними */
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
 }
 
-/* поле вводу email */
-.subscribe-input {
-  width: 264px; /* ширина поля */
-  height: 40px; /* висота */
-  padding-left: 16px; /* відступ тексту всередині */
-
-  background: transparent; /* прозорий фон */
-  border: 1px solid #ffffff; /* біла рамка */
-  border-radius: 4px; /* скруглення */
-
-  font-size: 12px; /* розмір тексту */
-  line-height: 2; /* висота рядка */
-  letter-spacing: 0.04em; /* розрядка */
-  color: #ffffff; /* білий текст */
-
-  outline: transparent; /* прибирає стандартний outline */
-  transition: border-color 250ms; /* плавний ефект */
+.footer-social-links {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* фокус на input */
-.subscribe-input:focus {
-  border-color: #31d0aa; /* зелена рамка */
+.footer-social-links:hover,
+.footer-social-links:focus {
+  background-color: #31d0aa;
 }
 
-/* placeholder */
-.subscribe-input::placeholder {
-  color: #ffffff; /* білий placeholder */
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
 }
 
-/* кнопка */
-.subscribe-btn {
-  min-width: 165px; /* мінімальна ширина */
-  height: 40px; /* висота */
-
-  display: flex; /* центрування контенту */
-  align-items: center; /* вертикаль */
-  justify-content: center; /* горизонталь */
-
-  font-size: 16px; /* текст */
-  font-weight: 500; /* жирність */
-  letter-spacing: 0.04em; /* розрядка */
-  color: #ffffff; /* білий текст */
-
-  background-color: #4d5ae5; /* синій фон */
-  border: none; /* без рамки */
-  border-radius: 4px; /* скруглення */
-
-  cursor: pointer; /* курсор-рука */
-  transition: background-color 250ms; /* плавність */
+.footer-subscribe-block {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
-/* hover кнопки */
-.subscribe-btn:hover,
-.subscribe-btn:focus {
-  background-color: #31d0aa; /* зелений */
+.footer-subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 165px;
+  gap: 16px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* іконка в кнопці */
-.subscribe-icon {
-  margin-left: 16px; /* відступ від тексту */
-  fill: #ffffff; /* білий колір */
+.footer-subscribe-button:hover,
+.footer-subscribe-button:focus {
+  background-color: #31d0aa;
+}
+
+.footer-email {
+  width: 288px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email::placeholder {
+  color: #ffffff;
+}
+
+.footer-email:focus {
+  border-color: #31d0aa;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    max-width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 72px;
+    column-gap: 24px;
+    padding: 0 108px;
+  }
+  .footer-text {
+    align-items: flex-start;
+  }
+  .footer-socials {
+    align-items: flex-start;
+  }
+  .footer-subscribe-block {
+    align-items: flex-start;
+  }
+  .footer-subscribe {
+    flex-direction: row;
+    column-gap: 24px;
+  }
+}
+
+@media screen and (min-width: 1158px) {
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    align-items: center;
+  }
+  .footer-container {
+    max-width: 1158px;
+    padding: 0 15px;
+    gap: 0;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .footer-socials {
+    margin-left: 120px;
+  }
+  .footer-subscribe-block {
+    margin-left: 83px;
+  }
 }
