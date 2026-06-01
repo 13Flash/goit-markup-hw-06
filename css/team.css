@@ -1,106 +1,118 @@
 .team {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  background-color: #f4f4fd;
+  padding: 96px 0; /* отступы секции сверху/снизу */
+  background-color: #f4f4fd; /* фон секции */
 }
 
+/* ===== CONTAINER ===== */
+.team-container {
+  max-width: 1158px; /* ограничение ширины */
+  margin: 0 auto; /* центрирование */
+  padding: 0 16px; /* боковые отступы */
+}
+
+/* ===== TITLE ===== */
+.section-title {
+  text-align: center; /* центр заголовка */
+  margin-bottom: 72px; /* отступ до карточек */
+}
+
+/* ===== LIST ===== */
+.team-list {
+  display: flex; /* включаем flex */
+  flex-direction: column; /* мобилка: колонка */
+  gap: 72px; /* расстояние между карточками */
+  margin: 0; /* убираем отступ */
+  padding: 0; /* убираем отступ */
+  list-style: none; /* убираем точки */
+  align-items: center; /* центр карточек */
+}
+
+/* ===== CARD ===== */
 .team-card {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  max-width: 264px;
-  border-radius: 0 0 4px 4px;
-  align-items: center;
-  box-shadow:
-    0 2px 1px 0 rgba(46, 47, 66, 0.08),
-    0 1px 1px 0 rgba(46, 47, 66, 0.16),
-    0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background-color: #fff; /* белый фон */
+  width: 264px; /* фикс ширина мобилка */
+  border-radius: 0 0 4px 4px; /* скругление снизу */
+  box-shadow: 0 2px 1px rgba(46,47,66,.08),
+              0 1px 1px rgba(46,47,66,.16),
+              0 1px 6px rgba(46,47,66,.08); /* тень */
 }
 
+/* image fix */
 .team-card-img {
-  display: block;
+  display: block; /* убираем нижний зазор */
+  width: 100%; /* растягиваем */
 }
 
+/* ===== CONTENT ===== */
 .team-card-content {
-  padding: 32px 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+  padding: 32px 16px; /* внутренние отступы */
+  text-align: center; /* центр текста */
+  display: flex; /* flex */
+  flex-direction: column; /* вертикально */
+  gap: 8px; /* расстояние */
 }
 
+/* ===== TEXT ===== */
 .team .block-title {
-  margin: 0;
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  letter-spacing: 0.02em;
-  text-align: center;
+  margin: 0; /* убираем margin */
+  font-weight: 500; /* средняя жирность */
+  font-size: 20px; /* размер */
+  line-height: 1.2; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние букв */
+  color: #2e2f42; /* цвет */
 }
 
 .team .block-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #434455;
+  margin: 0; /* убираем margin */
+  font-size: 16px; /* размер */
+  line-height: 1.5; /* читаемость */
+  color: #434455; /* серый */
 }
 
-.team-container {
-  display: flex;
-  flex-direction: column;
-  row-gap: 72px;
-}
-
-.team-list {
-  display: flex;
-  flex-direction: column;
-  max-width: 288px;
-  row-gap: 72px;
-  margin: 0;
-  justify-content: center;
-  align-items: center;
-}
-
+/* ===== SOCIAL ===== */
 .social-links {
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #4d5ae5;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 40px; /* размер */
+  height: 40px; /* размер */
+  display: flex; /* центр */
+  justify-content: center; /* центр */
+  align-items: center; /* центр */
+  border-radius: 50%; /* круг */
+  background-color: #4d5ae5; /* синий */
+  transition: 0.25s; /* плавность */
 }
 
 .social-links:hover,
 .social-links:focus {
-  background-color: #404bbf;
+  background-color: #404bbf; /* hover */
 }
 
+/* ================= TABLET ================= */
 @media screen and (min-width: 768px) {
+
   .team-list {
-    flex-direction: row;
-    flex-wrap: wrap;
-    column-gap: 24px;
-    row-gap: 64px;
-    max-width: 736px;
+    flex-direction: row; /* в ряд */
+    flex-wrap: wrap; /* перенос */
+    justify-content: center; /* центр */
+    gap: 24px; /* расстояние */
   }
+
   .team-card {
-    width: calc((100% - 24px) / 2);
+    width: calc((100% - 24px) / 2); /* 2 карточки */
   }
 }
 
+/* ================= DESKTOP ================= */
 @media screen and (min-width: 1158px) {
+
   .team {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0; /* больше воздуха */
   }
+
   .team-list {
-    column-gap: 24px;
+    flex-wrap: nowrap; /* 1 ряд */
   }
+
   .team-card {
-    width: calc((100% - 72px) / 4);
+    width: calc((100% - 72px) / 4); /* 4 карточки */
   }
 }
