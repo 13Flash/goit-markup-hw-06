@@ -205,3 +205,22 @@
   letter-spacing: 0.04em;
   color: #8e8f99;
 }
+
+/* ===== TABLET ===== */
+@media screen and (min-width: 768px) {
+  .form-class {
+    width: 408px; /* как у тебя было */
+    padding: 72px 24px 24px;
+  }
+
+  .form-description {
+    max-width: 360px; /* текст в 1 строку */
+  }
+}
+
+/* ===== DESKTOP ===== */
+@media screen and (min-width: 1158px) {
+  .form-class {
+    width: 408px; /* оставляем */
+  }
+}
