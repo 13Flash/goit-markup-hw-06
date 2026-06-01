@@ -104,10 +104,11 @@
 }
 
 .mobile-contacts-phone {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 1.2;
-  color: #4d5ae5; /* синий телефон */
+  font-weight: 500; /* medium */
+  font-size: 20px; /* размер текста */
+  line-height: 1.2; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние между буквами */
+  color: #4d5ae5; /* синий цвет телефона */
 }
 
 .mobile-contacts-email {
