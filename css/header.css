@@ -9,7 +9,6 @@
   display: flex; /* включаем flex */
   align-items: center; /* выравнивание по центру вертикально */
   justify-content: space-between; /* распределение по краям */
-  padding: 16px 16px; /* внутренние отступы */
 }
 
 .header .container {
