@@ -12,6 +12,10 @@
   padding: 16px 16px; /* внутренние отступы */
 }
 
+.header .container {
+    padding: 0; /* убираем отступы только в header */
+  }
+
 /* NAV */
 .navigation {
   display: flex; /* горизонтальная структура */
@@ -91,11 +95,6 @@
  .navigation {
     margin-left: 76px;
   }
-
-  .header .container {
-    padding: 0; /* убираем отступы только в header */
-  }
-
 }
 
 /* ===== DESKTOP ===== */
