@@ -1,115 +1,145 @@
 .mobile-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #ffffff;
-  z-index: 999;
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  position: fixed; /* фиксируем меню поверх страницы */
+  top: 0; /* прижимаем к верху */
+  left: 0; /* прижимаем к левому краю */
+  width: 100%; /* на всю ширину экрана */
+  height: 100%; /* на всю высоту экрана */
+  background-color: #ffffff; /* белый фон */
+  z-index: 999; /* поверх всего контента */
+
+  opacity: 0; /* скрыто по умолчанию */
+  visibility: hidden; /* полностью скрыто */
+  pointer-events: none; /* нельзя кликнуть */
+
+  overflow-y: auto; /* если контента много — появляется скролл */
+
   transition:
     opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); /* плавное появление */
 }
 
+/* состояние "открыто" */
 .mobile-menu.is-open {
-  opacity: 1;
-  visibility: visible;
-  pointer-events: auto;
+  opacity: 1; /* показываем */
+  visibility: visible; /* делаем видимым */
+  pointer-events: auto; /* разрешаем клики */
 }
 
 .mobile-menu-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding-top: 72px;
-  padding-bottom: 40px;
+  position: relative; /* база для absolute кнопки */
+  display: flex; /* включаем flex */
+  flex-direction: column; /* элементы сверху вниз */
+  height: 100%; /* на всю высоту */
+  padding-top: 72px; /* отступ сверху */
+  padding-bottom: 40px; /* отступ снизу */
 }
 
 .mobile-menu-close-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
+  position: absolute; /* позиционируем кнопку */
+  top: 24px; /* сверху */
+  right: 24px; /* справа */
+
+  width: 24px; /* ширина */
+  height: 24px; /* высота */
+
+  border-radius: 50%; /* круглая форма */
+  display: flex; /* центрируем иконку */
   align-items: center;
   justify-content: center;
-  background-color: transparent;
-  border: 1px solid rgba(46, 47, 66, 0.1);
-  cursor: pointer;
-  padding: 0;
+
+  background-color: transparent; /* прозрачный фон */
+  border: 1px solid rgba(46, 47, 66, 0.1); /* тонкая рамка */
+
+  cursor: pointer; /* курсор "рука" */
+  padding: 0; /* убираем внутренние отступы */
+
   transition:
-    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    background-color 250ms ease,
+    border 250ms ease; /* плавный hover */
+}
+
+/* hover эффект кнопки */
+.mobile-menu-close-btn:hover,
+.mobile-menu-close-btn:focus {
+  background-color: #404bbf; /* синий фон */
+  border: 1px solid #404bbf; /* синяя рамка */
+}
+
+.mobile-menu-close-btn:hover svg,
+.mobile-menu-close-btn:focus svg {
+  fill: #ffffff; /* иконка становится белой */
 }
 
 .mobile-nav {
-  margin-bottom: auto;
+  margin-bottom: auto; /* отталкивает низ вниз */
 }
+
 .mobile-nav-list {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
+  display: flex; /* flex список */
+  flex-direction: column; /* в колонку */
+  gap: 40px; /* расстояние между пунктами */
 }
+
 .mobile-nav-link {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  color: #2e2f42;
+  font-weight: 700; /* жирный текст */
+  font-size: 36px; /* большой размер */
+  line-height: 1.11; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние между буквами */
+  color: #2e2f42; /* тёмный цвет */
 }
+
 .mobile-nav-link.current {
-  color: #404bbf;
+  color: #404bbf; /* активный пункт */
 }
+
+.mobile-contacts {
+  font-style: normal; /* убираем italic у address */
+}
+
 .mobile-contacts-list {
   display: flex;
   flex-direction: column;
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 24px; /* расстояние между контактами */
+  margin-bottom: 48px; /* отступ вниз */
 }
+
 .mobile-contacts-phone {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
-  color: #4d5ae5;
+  color: #4d5ae5; /* синий телефон */
 }
+
 .mobile-contacts-email {
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
-  color: #434455;
-  font-style: normal;
+  color: #434455; /* серый email */
 }
-.mobile-contacts {
-  font-style: normal;
-}
+
 .mobile-social-list {
-  display: flex;
-  gap: 40px;
+  display: flex; /* иконки в ряд */
+  gap: 40px; /* расстояние */
 }
-.mobile-social-item {
-  width: 40px;
-  height: 40px;
-}
+
 .mobile-social-link {
-  width: 100%;
-  height: 100%;
-  background-color: #4d5ae5;
-  border-radius: 50%;
-  display: flex;
+  width: 40px; /* размер кружка */
+  height: 40px;
+
+  background-color: #4d5ae5; /* синий фон */
+  border-radius: 50%; /* круг */
+
+  display: flex; /* центрирование */
   align-items: center;
   justify-content: center;
 }
+
 .mobile-social-icon {
-  fill: #f4f4fd;
+  fill: #f4f4fd; /* цвет иконки */
 }
 
+/* скрываем на планшете и десктопе */
 @media screen and (min-width: 768px) {
   .mobile-menu {
     display: none;
