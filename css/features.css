@@ -1,3 +1,10 @@
+.feature {
+  display: flex;
+  justify-content: center;
+  padding-top: 96px;
+  padding-bottom: 96px;
+}
+
 .features-icon {
   background-color: #f4f4fd;
   display: flex;
@@ -29,9 +36,6 @@
   row-gap: 72px;
 }
 
-.features-list .block-text {
-  /* padding-top: 8px; */
-}
 
 @media screen and (min-width: 768px) {
   .features-list {
@@ -51,10 +55,22 @@
 }
 
 @media screen and (min-width: 1158px) {
+  .feature {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
   .features-icon {
     display: flex;
   }
   .features-item {
     width: calc((100% - 72px) / 4);
+  }
+  .block-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .block-text {
+    font-weight: 400;
   }
 }

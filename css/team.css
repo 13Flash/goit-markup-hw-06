@@ -1,4 +1,6 @@
 .team {
+  padding-top: 96px;
+  padding-bottom: 96px;
   background-color: #f4f4fd;
 }
 
@@ -83,7 +85,7 @@
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 64px;
-    max-width: none;
+    max-width: 736px;
   }
   .team-card {
     width: calc((100% - 24px) / 2);
@@ -91,6 +93,10 @@
 }
 
 @media screen and (min-width: 1158px) {
+  .team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
   .team-list {
     column-gap: 24px;
   }

@@ -75,7 +75,14 @@
   }
 
   .contact-list {
+    display: flex; /* показываем меню */
     flex-direction: column; /* контакты в колонку */
+    row-gap: 12px; /* расстояние между контактами */
+  }
+
+  .link 
+  {
+    padding: 0; /* убираем вертикальные отступы для контактов */
   }
 
   .header-button {
@@ -84,6 +91,11 @@
  .navigation {
     margin-left: 76px;
   }
+
+  .header .container {
+    padding: 0; /* убираем отступы только в header */
+  }
+
 }
 
 /* ===== DESKTOP ===== */
