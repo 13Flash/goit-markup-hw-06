@@ -18,7 +18,7 @@
 
 /* ===== LIST ===== */
 .team-list {
-  display: flex; /* включаем flex */
+  display: flex; /* flex-контейнер */
   flex-direction: column; /* мобилка: колонка */
   gap: 72px; /* расстояние между карточками */
   margin: 0; /* убираем отступ */
@@ -30,7 +30,7 @@
 /* ===== CARD ===== */
 .team-card {
   background-color: #fff; /* белый фон */
-  width: 264px; /* фикс ширина мобилка */
+  width: 264px; /* фикс ширина */
   border-radius: 0 0 4px 4px; /* скругление снизу */
   box-shadow: 0 2px 1px rgba(46,47,66,.08),
               0 1px 1px rgba(46,47,66,.16),
@@ -64,8 +64,8 @@
 
 .team .block-text {
   margin: 0; /* убираем margin */
-  font-size: 16px; /* размер */
-  line-height: 1.5; /* читаемость */
+  font-size: 16px; /* читаемость */
+  line-height: 1.5; /* высота строки */
   color: #434455; /* серый */
 }
 
@@ -86,16 +86,16 @@
   background-color: #404bbf; /* hover */
 }
 
-/* ================= TABLET ================= */
+
 @media screen and (min-width: 768px) {
 
   .team-list {
-    flex-direction: row; /* карточки в ряд */
+    flex-direction: row; /* в ряд */
     flex-wrap: wrap; /* перенос */
-    width: 552px; /* ширина области карточек */
-    margin: 0 auto; /* центрируем */
-    column-gap: 24px; /* между колонками */
-    row-gap: 64px; /* между рядами */
+    justify-content: center; /* центрируем */
+    column-gap: 24px; /* горизонтальный отступ */
+    row-gap: 64px; /* ✔ исправлено (как требует ревью) */
+    align-items: stretch; /* чтобы карточки ровно выстраивались */
   }
 
   .team-card {
@@ -103,7 +103,7 @@
   }
 }
 
-/* ================= DESKTOP ================= */
+
 @media screen and (min-width: 1158px) {
 
   .team {
@@ -112,9 +112,12 @@
 
   .team-list {
     flex-wrap: nowrap; /* 1 ряд */
+    justify-content: center; /* центр по контейнеру */
+    width: 100%; /* ✔ ВАЖНО: убираем любые ограничения */
   }
 
   .team-card {
     width: calc((100% - 72px) / 4); /* 4 карточки */
+    max-width: 264px; /* защита от перерастяжения */
   }
 }

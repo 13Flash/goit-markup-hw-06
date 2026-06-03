@@ -1,173 +1,171 @@
 body {
-  font-family: 'Roboto', sans-serif;
-  color: #2e2f42;
-  background-color: #ffffff;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  padding: 0;
-  margin: 0;
+  font-family: 'Roboto', sans-serif; /* основной шрифт */
+  color: #2e2f42; /* основной цвет текста */
+  background-color: #ffffff; /* белый фон */
+  line-height: 1.5; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние между буквами */
+  padding: 0; /* убираем внутренние отступы */
+  margin: 0; /* убираем внешние отступы */
 }
 
+/* контейнер */
 .container {
-  max-width: 320px;
-  margin: 0 auto;
-  padding: 0 16px;
+  width: 320px; /* ширина мобильного контейнера */
+  margin: 0 auto; /* центрирование */
+  padding: 0 16px; /* боковые отступы */
+  box-sizing: border-box; /* padding входит в ширину */
 }
 
 ul,
 ol {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  list-style: none; /* убираем маркеры */
+  margin: 0; /* убираем внешние отступы */
+  padding: 0; /* убираем внутренние отступы */
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* убираем подчёркивание */
+  color: inherit; /* наследуем цвет */
 }
 
 h1,
 h2,
 h3,
 p {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* убираем внешние отступы */
+  padding: 0; /* убираем внутренние отступы */
 }
 
 .svg-def {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
+  position: absolute; /* убираем из потока */
+  width: 0; /* нулевая ширина */
+  height: 0; /* нулевая высота */
+  overflow: hidden; /* скрываем содержимое */
 }
 
 .default-palette,
 .palette0 {
-  color: currentColor;
-  --color0: #f4f4fd;
-  --color1: #4d5ae5;
-  --color2: #2e2f42;
+  color: currentColor; /* текущий цвет */
+  --color0: #f4f4fd; /* светлый */
+  --color1: #4d5ae5; /* акцент */
+  --color2: #2e2f42; /* тёмный */
 }
 
 address {
-  font-style: normal;
-  color: #434455;
+  font-style: normal; /* убираем курсив */
+  color: #434455; /* серый цвет */
 }
 
 .link {
-  text-decoration: none;
-  color: #434455;
-  text-align: center;
-  padding: 0;
+  text-decoration: none; /* без подчёркивания */
+  color: #434455; /* серый цвет */
+  text-align: center; /* выравнивание */
+  padding: 0; /* без отступов */
 }
 
 .link:hover,
 .link:focus {
-  color: #404bbf;
+  color: #404bbf; /* цвет при наведении */
 }
 
 .color-accent {
-  color: #4d5ae5;
+  color: #4d5ae5; /* акцентный цвет */
 }
 
 .logo {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  font-family: 'Raleway', sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 1.33333;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
+  padding-top: 16px; /* отступ сверху */
+  padding-bottom: 16px; /* отступ снизу */
+  font-family: 'Raleway', sans-serif; /* шрифт логотипа */
+  font-weight: 700; /* жирность */
+  font-size: 18px; /* размер */
+  line-height: 1.33; /* высота строки */
+  letter-spacing: 0.03em; /* расстояние букв */
+  text-transform: uppercase; /* заглавные буквы */
 }
 
 .section-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-align: center;
-  padding: 0;
-  margin: 0;
+  font-weight: 700; /* жирность */
+  font-size: 36px; /* размер */
+  line-height: 1.11; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние букв */
+  text-align: center; /* центрирование */
 }
 
 .block-title {
-  padding: 0;
-  margin: 0;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11111;
-  letter-spacing: 0.02em;
-  text-align: center;
+  font-weight: 700; /* жирность */
+  font-size: 36px; /* размер */
+  line-height: 1.11; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние букв */
+  text-align: center; /* центрирование */
 }
 
 .block-text {
-  padding: 0;
-  margin: 0;
-  max-width: 264px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
+  max-width: 264px; /* максимальная ширина */
+  font-weight: 500; /* жирность */
+  font-size: 16px; /* размер */
+  line-height: 1.5; /* высота строки */
+  letter-spacing: 0.02em; /* расстояние букв */
 }
 
 .socials {
-  display: flex;
-  flex-direction: row;
-  column-gap: 24px;
+  display: flex; /* flex-контейнер */
+  column-gap: 24px; /* расстояние между элементами */
 }
 
 .sr-only {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(100%);
-  margin: -1px;
+  position: absolute; /* убираем из потока */
+  white-space: nowrap; /* запрет переноса */
+  width: 1px; /* ширина */
+  height: 1px; /* высота */
+  overflow: hidden; /* скрываем */
+  border: 0; /* без рамки */
+  padding: 0; /* без отступов */
+  clip: rect(0 0 0 0); /* обрезаем */
+  clip-path: inset(100%); /* скрываем */
+  margin: -1px; /* убираем влияние */
 }
 
 .section {
-  display: flex;
-  justify-content: center;
+  display: flex; /* flex-контейнер */
+  justify-content: center; /* центрирование */
 }
 
 .main-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  padding: 16px 32px;
-  border: none;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
-  cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; /* flex */
+  align-items: center; /* по вертикали */
+  justify-content: center; /* по горизонтали */
+  gap: 16px; /* расстояние между элементами */
+  padding: 16px 32px; /* внутренние отступы */
+  border: none; /* без рамки */
+  border-radius: 4px; /* скругление */
+  font-weight: 500; /* жирность */
+  font-size: 16px; /* размер */
+  line-height: 1.5; /* высота строки */
+  letter-spacing: 0.04em; /* расстояние букв */
+  color: #ffffff; /* белый текст */
+  background-color: #4d5ae5; /* синий фон */
+  cursor: pointer; /* курсор */
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15); /* тень */
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); /* анимация */
 }
 
 .main-button:hover,
 .main-button:focus {
-  background-color: #404bbf;
+  background-color: #404bbf; /* цвет при наведении */
 }
 
+/* ===== TABLET ===== */
 @media screen and (min-width: 768px) {
   .container {
-    max-width: 768px;
+    width: 768px; /* ширина планшета */
+    padding: 0 16px; /* боковые отступы */
   }
 }
 
+/* ===== DESKTOP ===== */
 @media screen and (min-width: 1158px) {
   .container {
-    max-width: 1158px;
-    padding: 0 15px;
+    width: 1158px; /* ширина десктопа */
+    padding: 0 15px; /* боковые отступы */
   }
 }
