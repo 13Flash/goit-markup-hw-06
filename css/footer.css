@@ -174,9 +174,11 @@
   }
 
   .footer-container {
+    max-width: 1158px; /* ограничение ширины */
     flex-direction: row; /* горизонтальная раскладка */
     flex-wrap: nowrap; /* без переноса */
     justify-content: space-between; /* равномерное распределение */
     align-items: flex-start; /* сверху */
   }
+  
 }
