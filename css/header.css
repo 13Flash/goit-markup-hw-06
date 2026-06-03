@@ -1,72 +1,85 @@
 .header {
   border-bottom: 1px solid #e7e9fc; /* нижняя линия */
-  box-shadow:
-    0 1px 6px rgba(46, 47, 66, 0.08),
-    0 1px 1px rgba(46, 47, 66, 0.16),
-    0 2px 1px rgba(46, 47, 66, 0.08); /* тень */
+  box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08),
+              0 1px 1px rgba(46, 47, 66, 0.16),
+              0 2px 1px rgba(46, 47, 66, 0.08); /* тень */
 }
 
 .header .container {
-  display: flex; /* флекс-контейнер */
+  display: flex; /* все элементы в ряд */
   align-items: center; /* вертикальное выравнивание */
-  justify-content: flex-start; /* ✔ убрали space-between */
+  justify-content: flex-start; /* не разбрасываем элементы */
 }
 
-/* NAV — НЕ участвует в layout на мобилке */
-.navigation {
-  display: block; /* ✔ не flex */
-  margin-left: auto; /* прижимает вправо только на десктопе */
-}
+/* =======================
+   МОБИЛКА (по умолчанию)
+======================= */
 
-/* скрытые списки (мобилка) */
 .navigation-list,
 .contact-list {
-  display: none; /* не занимают место */
+  display: none; /* скрыты на мобилке */
 }
 
-/* ссылки */
-.nav-link {
-  display: inline-block; /* кликабельная зона */
-  padding: 24px 0; /* высота клика */
-  transition: color 250ms ease;
-}
-
-.link {
-  display: inline-block; /* кликабельность */
-  font-size: 12px; /* мобилка */
-  line-height: 1.17;
-}
-
-/* активная ссылка */
-.nav-active-link {
-  position: relative; /* линия снизу */
-  color: #404bbf; /* активный цвет */
-}
-
-.nav-active-link::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 4px;
-  background-color: #404bbf;
-  border-radius: 4px;
-}
-
-/* hover */
-.nav-link:hover,
-.nav-link:focus,
-.link:hover,
-.link:focus {
-  color: #404bbf;
-}
-
-/* бургер */
 .header-button {
-  margin-left: auto; /* ✔ прижимает вправо */
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0;
+  margin-left: auto; /* бургер уходит вправо */
+  background: transparent; /* без фона */
+  border: none; /* без рамки */
+  cursor: pointer; /* курсор */
+  padding: 0; /* убираем отступы */
+}
+
+.nav-link {
+  display: block; /* кликабельный блок */
+  padding: 24px 0; /* зона клика */
+}
+
+
+@media screen and (min-width: 768px) {
+
+  .header-button {
+    display: none; /* бургер скрыт */
+  }
+
+  .navigation-list {
+    display: flex; /* показываем меню */
+    gap: 40px; /* расстояние между пунктами */
+  }
+
+  .navigation {
+    margin-left: 120px; /* расстояние от логотипа */
+  }
+
+  .contact-list {
+    display: flex; /* показываем контакты */
+    flex-direction: column; /* столбиком */
+    gap: 12px; /* расстояние */
+    margin-left: auto; /* прижимаем вправо */
+  }
+
+  .link {
+    font-size: 12px; /* планшетный размер */
+    line-height: 1.17; /* высота строки */
+    letter-spacing: 0.04em; /* ✔ важно по макету */
+  }
+}
+
+
+
+
+@media screen and (min-width: 1158px) {
+
+  .navigation {
+    margin-left: 76px; /* меньше расстояние чем на планшете */
+  }
+
+  .contact-list {
+    flex-direction: row; /* контакты в строку */
+    gap: 40px; /* расстояние между ними */
+  }
+
+  .link {
+    font-size: 16px; /* крупнее текст */
+    line-height: 1.5; /* читаемость */
+    letter-spacing: 0.04em; /* сохраняем макет */
+  }
 }
