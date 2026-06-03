@@ -1,209 +1,181 @@
 .footer {
-  padding-top: 96px;
-  padding-bottom: 96px;
-  display: flex;
-  flex-direction: column;
-  background-color: #2e2f42;
-  color: #ffffff;
+  padding-top: 96px; /* верхний отступ секции */
+  padding-bottom: 96px; /* нижний отступ секции */
+  background-color: #2e2f42; /* тёмный фон футера */
+  color: #ffffff; /* базовый цвет текста */
 }
 
 .footer-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 72px;
+  display: flex; /* включаем flex-раскладку */
+  flex-direction: column; /* мобилка: элементы в колонку */
+  align-items: center; /* центрируем блоки по горизонтали */
+  row-gap: 72px; /* расстояние между блоками */
 }
 
 .footer-text {
-  display: flex;
-  gap: 16px;
-  flex-direction: column;
-  align-items: center;
-  max-width: 288px;
+  display: flex; /* flex внутри текстового блока */
+  gap: 16px; /* расстояние между элементами */
+  flex-direction: column; /* элементы друг под другом */
+  align-items: center; /* центр на мобилке */
+  max-width: 288px; /* ограничение ширины текста */
 }
 
 .footer .block-text {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: #ffffff;
+  font-weight: 400; /* обычная толщина шрифта */
+  font-size: 16px; /* размер текста */
+  line-height: 1.5; /* читаемость строк */
+  letter-spacing: 0.02em; /* межбуквенный интервал */
+  color: #ffffff; /* белый текст */
 }
 
 .footer .logo {
-  color: #f4f4fd;
+  color: #f4f4fd; /* светлый логотип */
 }
 
 .footer .color-accent {
-  color: #4d5ae5;
+  color: #4d5ae5; /* акцентный цвет */
 }
 
 .footer-socials {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 16px;
+  display: flex; /* flex для соцблока */
+  flex-direction: column; /* вертикально */
+  align-items: center; /* центр на мобилке */
+  gap: 16px; /* расстояние */
 }
 
 .footer-socials .block-text {
-  font-weight: 500;
+  font-weight: 500; /* чуть жирнее заголовок */
 }
 
 .footer-links {
-  display: flex;
-  flex-direction: row;
-  gap: 16px;
+  display: flex; /* горизонтальный ряд иконок */
+  flex-direction: row; /* в линию */
+  gap: 16px; /* расстояние между иконками */
 }
 
 .footer-social-links {
-  border-radius: 50%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 40px;
-  height: 40px;
-  background-color: #4d5ae5;
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 50%; /* круглая форма */
+  display: flex; /* центрирование иконки */
+  flex-direction: row; /* не обязательно, но оставлено */
+  justify-content: center; /* центр по горизонтали */
+  align-items: center; /* центр по вертикали */
+  width: 40px; /* размер кнопки */
+  height: 40px; /* размер кнопки */
+  background-color: #4d5ae5; /* синий фон */
+  transition: background-color 0.25s ease; /* плавный hover */
 }
 
 .footer-social-links:hover,
 .footer-social-links:focus {
-  background-color: #31d0aa;
+  background-color: #31d0aa; /* hover цвет */
 }
 
 .footer-subscribe {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  row-gap: 16px;
+  display: flex; /* flex для подписки */
+  flex-direction: column; /* колонка */
+  align-items: center; /* центр */
+  row-gap: 16px; /* расстояние */
 }
 
 .footer-subscribe-block {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  align-items: center;
+  display: flex; /* блок формы */
+  flex-direction: column; /* элементы вниз */
+  gap: 16px; /* расстояние */
+  align-items: center; /* центр */
 }
 
 .footer-subscribe-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 165px;
-  gap: 16px;
-  padding: 8px 24px;
-  border: none;
-  border-radius: 4px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  background-color: #4d5ae5;
-  cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex; /* кнопка flex */
+  align-items: center; /* центр по вертикали */
+  justify-content: center; /* центр по горизонтали */
+  max-width: 165px; /* ограничение ширины */
+  gap: 16px; /* расстояние внутри */
+  padding: 8px 24px; /* внутренние отступы */
+  border: none; /* убираем рамку */
+  border-radius: 4px; /* скругление */
+  font-weight: 500; /* средний вес */
+  font-size: 16px; /* размер текста */
+  line-height: 1.5; /* высота строки */
+  letter-spacing: 0.04em; /* интервал букв */
+  color: #ffffff; /* белый текст */
+  background-color: #4d5ae5; /* синий фон */
+  cursor: pointer; /* курсор кнопки */
+  box-shadow: 0 4px 4px rgba(0,0,0,0.15); /* тень */
+  transition: background-color 0.25s ease; /* анимация */
 }
 
 .footer-subscribe-button:hover,
 .footer-subscribe-button:focus {
-  background-color: #31d0aa;
+  background-color: #31d0aa; /* hover */
 }
 
 .footer-email {
-  min-width: 288px;
-  height: 40px;
-  padding: 8px 16px;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
-  background-color: transparent;
-  outline: none;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-  letter-spacing: 0.04em;
-  color: #ffffff;
-  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 288px; /* минимальная ширина input */
+  height: 40px; /* высота поля */
+  padding: 8px 16px; /* внутренние отступы */
+  border: 1px solid #ffffff; /* белая рамка */
+  border-radius: 4px; /* скругление */
+  background-color: transparent; /* прозрачный фон */
+  outline: none; /* убираем outline */
+  font-weight: 400; /* обычный текст */
+  font-size: 12px; /* маленький текст */
+  line-height: 2; /* высота строки */
+  letter-spacing: 0.04em; /* интервал букв */
+  color: #ffffff; /* белый текст */
+  transition: border-color 0.25s ease; /* плавность */
 }
 
 .footer-email::placeholder {
-  color: #ffffff;
+  color: #ffffff; /* цвет placeholder */
 }
 
 .footer-email:focus {
-  border-color: #31d0aa;
+  border-color: #31d0aa; /* фокус */
 }
 
 @media screen and (min-width: 768px) {
-  .footer {
-    padding-top: 96px;
-    padding-bottom: 96px;
+
+  .footer-container {
+    flex-direction: row; /* в ряд на планшете */
+    flex-wrap: wrap; /* перенос блоков */
+    align-items: flex-start; /* сверху */
+    row-gap: 72px; /* вертикальные отступы */
+    column-gap: 24px; /* горизонтальные */
   }
 
-  .container-footer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    column-gap: 24px;
-    row-gap: 72px;
-    padding-left: 108px;
+  .footer-text {
+    align-items: flex-start; /* выравнивание влево */
   }
 
-  .footer-info {
-    align-items: flex-start;
+  .footer-socials {
+    align-items: flex-start; /* влево */
   }
 
-  .footer-social {
-    align-items: flex-start;
-  }
-
-  .footer-social-title {
-    text-align: left;
+  .footer-subscribe-block {
+    align-items: flex-start; /* влево */
   }
 
   .footer-subscribe {
-    align-items: flex-start;
-    width: auto;
+    flex-direction: row; /* строка */
+    column-gap: 24px; /* расстояние */
   }
 
-  .subscribe-title {
-    text-align: left;
-  }
-
-  .subscribe-form {
-    flex-direction: row;
-    gap: 24px;
-    width: auto;
-  }
-
-  .subscribe-input {
-    width: 264px;
+  .footer-email {
+    min-width: 264px; /* шире на планшете */
   }
 }
 
 @media screen and (min-width: 1158px) {
+
   .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 100px; /* больше воздуха */
+    padding-bottom: 100px; /* больше воздуха */
   }
 
-  .container-footer {
-    flex-wrap: nowrap;
-    align-items: flex-start;
-    gap: 0;
-    padding-left: 15px;
-  }
-
-  .footer-info {
-    margin-right: 120px;
-  }
-
-  .footer-social {
-    margin-right: 83px;
-  }
-
-  .footer-subscribe {
-    flex: 1;
+  .footer-container {
+    flex-direction: row; /* горизонтальная раскладка */
+    flex-wrap: nowrap; /* без переноса */
+    justify-content: space-between; /* равномерное распределение */
+    align-items: flex-start; /* сверху */
   }
 }
