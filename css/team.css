@@ -3,20 +3,11 @@
   background-color: #f4f4fd; /* фон секции */
 }
 
-/* ===== CONTAINER ===== */
-.team-container {
-  max-width: 1158px; /* ограничение ширины */
-  margin: 0 auto; /* центрирование */
-  padding: 0 16px; /* боковые отступы */
-}
-
-/* ===== TITLE ===== */
 .section-title {
   text-align: center; /* центр заголовка */
   margin-bottom: 72px; /* отступ до карточек */
 }
 
-/* ===== LIST ===== */
 .team-list {
   display: flex; /* flex-контейнер */
   flex-direction: column; /* мобилка: колонка */
@@ -27,7 +18,6 @@
   align-items: center; /* центр карточек */
 }
 
-/* ===== CARD ===== */
 .team-card {
   background-color: #fff; /* белый фон */
   width: 264px; /* фикс ширина */
