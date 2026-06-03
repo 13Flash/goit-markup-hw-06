@@ -1,85 +1,125 @@
 .header {
   border-bottom: 1px solid #e7e9fc; /* нижняя линия */
-  box-shadow: 0 1px 6px rgba(46, 47, 66, 0.08),
-              0 1px 1px rgba(46, 47, 66, 0.16),
-              0 2px 1px rgba(46, 47, 66, 0.08); /* тень */
+  box-shadow:
+    0 1px 6px rgba(46, 47, 66, 0.08), /* большая тень */
+    0 1px 1px rgba(46, 47, 66, 0.16), /* средняя тень */
+    0 2px 1px rgba(46, 47, 66, 0.08); /* малая тень */
 }
+
 
 .header .container {
-  display: flex; /* все элементы в ряд */
-  align-items: center; /* вертикальное выравнивание */
-  justify-content: flex-start; /* не разбрасываем элементы */
+  display: flex; /* элементы в ряд */
+  align-items: center; /* центр по вертикали */
+  justify-content: space-between; /* по краям */
 }
 
-/* =======================
-   МОБИЛКА (по умолчанию)
-======================= */
+.navigation {
+  display: flex;
+  flex-grow: 1; /* занимает свободное место */
+  font-weight: 500;
+  font-size: 16px;
+  display: none;
+}
 
 .navigation-list,
 .contact-list {
-  display: none; /* скрыты на мобилке */
+  display: flex;
+  flex-direction: row;
+  column-gap: 40px;
+}
+
+.contact-list {
+  display: none;
+}
+
+.nav-link,
+.link {
+  display: inline-block;
+  padding-top: 24px;
+  padding-bottom: 24px;
+  transition: color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16667;
+  letter-spacing: 0.04em;
+  color: #434455;
+}
+
+.nav-active-link {
+  color: #404bbf;
+  position: relative;
+}
+
+.nav-active-link::after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #404bbf;
+  position: absolute;
+  bottom: 0;
+}
+
+.nav-link:focus,
+.nav-link:hover,
+.link:focus,
+.link:hover {
+  color: #404bbf;
 }
 
 .header-button {
-  margin-left: auto; /* бургер уходит вправо */
-  background: transparent; /* без фона */
-  border: none; /* без рамки */
-  cursor: pointer; /* курсор */
-  padding: 0; /* убираем отступы */
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+  color: #2e2f42;
+  cursor: pointer;
 }
-
-.nav-link {
-  display: block; /* кликабельный блок */
-  padding: 24px 0; /* зона клика */
-}
-
 
 @media screen and (min-width: 768px) {
-
-  .header-button {
-    display: none; /* бургер скрыт */
-  }
-
-  .navigation-list {
-    display: flex; /* показываем меню */
-    gap: 40px; /* расстояние между пунктами */
-  }
-
   .navigation {
-    margin-left: 120px; /* расстояние от логотипа */
+    display: flex;
+    padding-left: 120px;
   }
-
   .contact-list {
-    display: flex; /* показываем контакты */
-    flex-direction: column; /* столбиком */
-    gap: 12px; /* расстояние */
-    margin-left: auto; /* прижимаем вправо */
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
   }
 
   .link {
-    font-size: 12px; /* планшетный размер */
-    line-height: 1.17; /* высота строки */
-    letter-spacing: 0.04em; /* ✔ важно по макету */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .header-button {
+    display: none;
   }
 }
 
-
-
-
 @media screen and (min-width: 1158px) {
-
+  .header {
+    padding: 0 15px;
+  }
+  .header .container {
+    justify-content: space-between;
+  }
   .navigation {
-    margin-left: 76px; /* меньше расстояние чем на планшете */
+    padding-left: 76px;
+    flex-grow: 1;
   }
-
   .contact-list {
-    flex-direction: row; /* контакты в строку */
-    gap: 40px; /* расстояние между ними */
+    flex-direction: row;
+    column-gap: 40px;
   }
-
   .link {
-    font-size: 16px; /* крупнее текст */
-    line-height: 1.5; /* читаемость */
-    letter-spacing: 0.04em; /* сохраняем макет */
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
   }
 }

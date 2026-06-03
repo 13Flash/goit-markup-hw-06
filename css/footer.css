@@ -1,75 +1,209 @@
 .footer {
-  padding: 96px 0; /* вертикальные отступы секции */
-  background-color: #2e2f42; /* фон футера */
-  color: #ffffff; /* базовый цвет текста */
+  padding-top: 96px;
+  padding-bottom: 96px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2e2f42;
+  color: #ffffff;
 }
 
 .footer-container {
-  display: flex; /* включаем flex */
-  flex-direction: column; /* мобилка */
-  gap: 72px; /* расстояние между блоками */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 72px;
 }
 
-/* ===== БАЗОВЫЕ БЛОКИ ===== */
+.footer-text {
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  align-items: center;
+  max-width: 288px;
+}
 
-.footer-text,
-.footer-socials,
+.footer .block-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.footer .logo {
+  color: #f4f4fd;
+}
+
+.footer .color-accent {
+  color: #4d5ae5;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-socials .block-text {
+  font-weight: 500;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+
+.footer-social-links {
+  border-radius: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: #4d5ae5;
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-social-links:hover,
+.footer-social-links:focus {
+  background-color: #31d0aa;
+}
+
+.footer-subscribe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 16px;
+}
+
 .footer-subscribe-block {
-  display: flex; /* flex структура */
-  flex-direction: column; /* вертикально */
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
 }
 
+.footer-subscribe-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 165px;
+  gap: 16px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: #4d5ae5;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  transition: background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+.footer-subscribe-button:hover,
+.footer-subscribe-button:focus {
+  background-color: #31d0aa;
+}
+
+.footer-email {
+  min-width: 288px;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: transparent;
+  outline: none;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-email::placeholder {
+  color: #ffffff;
+}
+
+.footer-email:focus {
+  border-color: #31d0aa;
+}
 
 @media screen and (min-width: 768px) {
-
-  .footer-container {
-    flex-direction: row; /* в ряд */
-    flex-wrap: wrap; /* разрешаем перенос */
-    align-items: flex-start; /* сверху */
-    gap: 72px 24px; /* row / column gap */
+  .footer {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 
-  .footer-text {
-    align-items: flex-start; /* влево */
-    max-width: 264px; /* фиксируем ширину */
+  .container-footer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    column-gap: 24px;
+    row-gap: 72px;
+    padding-left: 108px;
   }
 
-  .footer-socials {
-    align-items: flex-start; /* влево */
+  .footer-info {
+    align-items: flex-start;
   }
 
-  .footer-subscribe-block {
-    width: 100%; /* 🔥 ВАЖНО: всегда на новую строку */
-    align-items: flex-start; /* влево */
+  .footer-social {
+    align-items: flex-start;
+  }
+
+  .footer-social-title {
+    text-align: left;
   }
 
   .footer-subscribe {
-    flex-direction: row; /* input + button в ряд */
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .subscribe-title {
+    text-align: left;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
     gap: 24px;
+    width: auto;
+  }
+
+  .subscribe-input {
+    width: 264px;
   }
 }
 
-
-
 @media screen and (min-width: 1158px) {
-
-  .footer-container {
-    flex-wrap: nowrap; /* без переноса */
-    justify-content: flex-start; /* слева старт */
-    gap: 0; 
+  .footer {
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
-  .footer-text {
-    margin-right: 80px; /* расстояние до соцсетей */
+  .container-footer {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    gap: 0;
+    padding-left: 15px;
   }
 
-  .footer-socials {
+  .footer-info {
     margin-right: 120px;
   }
 
-  .footer-subscribe-block {
-    margin-left: auto; 
-    width: auto; /* убираем full width */
+  .footer-social {
+    margin-right: 83px;
+  }
+
+  .footer-subscribe {
+    flex: 1;
   }
 }
