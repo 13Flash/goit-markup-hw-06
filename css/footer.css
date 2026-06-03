@@ -136,6 +136,7 @@
 @media screen and (min-width: 768px) {
 
   .footer-container {
+    max-width: 768px; /* ограничение ширины на планшете */
     flex-direction: row; /* в ряд на планшете */
     flex-wrap: wrap; /* перенос блоков */
     align-items: flex-start; /* сверху */
