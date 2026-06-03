@@ -90,14 +90,16 @@
 @media screen and (min-width: 768px) {
 
   .team-list {
-    flex-direction: row; /* в ряд */
+    flex-direction: row; /* карточки в ряд */
     flex-wrap: wrap; /* перенос */
-    justify-content: center; /* центр */
-    gap: 24px; /* расстояние */
+    width: 552px; /* ширина области карточек */
+    margin: 0 auto; /* центрируем */
+    column-gap: 24px; /* между колонками */
+    row-gap: 64px; /* между рядами */
   }
 
   .team-card {
-    width: calc((100% - 24px) / 2); /* 2 карточки */
+    width: 264px; /* фиксированная ширина */
   }
 }
 
