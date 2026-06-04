@@ -136,12 +136,13 @@
 @media screen and (min-width: 768px) {
 
   .footer-container {
-    max-width: 768px; /* ограничение ширины на планшете */
-    flex-direction: row; /* в ряд на планшете */
-    flex-wrap: wrap; /* перенос блоков */
-    align-items: flex-start; /* сверху */
-    row-gap: 72px; /* вертикальные отступы */
-    column-gap: 24px; /* горизонтальные */
+    max-width: 768px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: 72px;
+    column-gap: 24px;
+    padding: 0 108px;
   }
 
   .footer-text {
@@ -171,14 +172,20 @@
   .footer {
     padding-top: 100px; /* больше воздуха */
     padding-bottom: 100px; /* больше воздуха */
+    align-items: center; /* центрируем по горизонтали */
   }
 
   .footer-container {
     max-width: 1158px; /* ограничение ширины */
     flex-direction: row; /* горизонтальная раскладка */
     flex-wrap: nowrap; /* без переноса */
-    justify-content: space-between; /* равномерное распределение */
+    justify-content: flex-start; /* выравнивание по началу */
     align-items: flex-start; /* сверху */
   }
-  
+  .footer-socials {
+     margin-left: 120px;
+  }
+  .footer-subscribe-block {
+     margin-left: 83px;
+  }
 }
